@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shooting Stars!</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        let texto = "Shooting Stars!";
+        let index = 0;
+
+        function moverTituloDerecha() {
+            document.title = texto.substring(index) + texto.substring(0, index);
+            index = (index - 1 + texto.length) % texto.length; //Mueve el titulo hacia la derecha
+        }
+        setInterval(moverTituloDerecha, 300); //Cambia el título cada 200ms
+    </script>
+</head>
+<body>
+    <section>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </section>
+</body>
+</html>
